@@ -3,76 +3,61 @@
  */
 package com.example;
 
-import java.util.Arrays;
-import java.util.Random;
+import com.example.demo.Lab3;
+
+import java.nio.file.Path;
 
 public class App {
 
 
     public static void main(String[] args) {
-
-//        roll(2);
-//        int[] arr = {1, 2, 3, 1};
-//        System.out.println(containsDuplicates(arr));
-
-        double[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
-
-        temperatures(weeklyMonthTemperatures);
-
-    }
-
-    public static int[] roll(int n){
-
-        Random random = new Random();
-
-        int[] arr = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            arr[i] = random.nextInt(6) + 1;
-        }
-
-        return arr;
-//        System.out.print("[");
-//        for (int i = 0; i < arr.length; i++) {
-//            try{
-//                System.out.print(arr[i]);
-//                if (i < arr.length - 1) {
-//                    System.out.print(", ");
-//                }
-//            }catch (ArrayIndexOutOfBoundsException exception){
-//                System.out.print(", index of array out of range");
-//            }
+//        Lab2 lab2 = new Lab2();
 //
-//        }
-//        System.out.println("]");
+//        lab2.roll(2);
+//        int[] arr = {1, 2, 3, 1};
+//        System.out.println(lab2.containsDuplicates(arr));
+//
+//        double[][] weeklyMonthTemperatures = {
+//                {66, 64, 58, 65, 71, 57, 60},
+//                {57, 65, 65, 70, 72, 65, 51},
+//                {55, 54, 60, 53, 59, 57, 61},
+//                {65, 56, 55, 52, 55, 62, 57}
+//        };
+//
+//        lab2.temperatures(weeklyMonthTemperatures);
+
+        Lab3 lab3 = new Lab3();
+//
+//        int[][] weeklyMonthTemperatures = {
+//                {66, 64, 58, 65, 71, 57, 60},
+//                {57, 65, 65, 70, 72, 65, 51},
+//                {55, 54, 60, 53, 59, 57, 61},
+//                {65, 56, 55, 52, 55, 62, 57}
+//        };
+//
+//        lab3.wither(weeklyMonthTemperatures);
+
+//        List<String> votes = new ArrayList<>();
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Shrub");
+//        votes.add("Hedge");
+//        votes.add("Shrub");
+//        votes.add("Bush");
+//        votes.add("Hedge");
+//        votes.add("Bush");
+//
+//        String winner = Lab3.tally(votes);
+//        System.out.println(winner + " received the most votes!");
+
+
+        Path path = Path.of("gates.js");
+        Lab3 newApp = new Lab3();
+        System.out.println(newApp.linter(path));
+
+
     }
 
-    public static boolean containsDuplicates(int[] arr){
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length; j++) {
-                if (arr[i] == arr[j]){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public static double[] temperatures(double[][] weeklyMonthTemperatures ){
-        double[] arr = new double[weeklyMonthTemperatures.length];
-        for (int i = 0; i < weeklyMonthTemperatures.length; i++) {
-            double sum = 0;
-            for (int j = 0; j < weeklyMonthTemperatures[i].length; j++) {
-                sum += weeklyMonthTemperatures[i][j];
-            }
-            arr[i] = sum/weeklyMonthTemperatures[i].length;
-        }
-        return arr;
-    }
 }

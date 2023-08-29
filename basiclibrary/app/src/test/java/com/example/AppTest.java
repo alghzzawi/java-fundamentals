@@ -3,13 +3,14 @@
  */
 package com.example;
 
+import com.example.demo.Lab2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test
     void rollTest(){
-        App classUnderTest = new App();
+        Lab2 classUnderTest = new Lab2();
 
         assertEquals(2, classUnderTest.roll(2).length, "Test failed check your parameters");
 
@@ -17,7 +18,7 @@ class AppTest {
 
     @Test
     void containsDuplicatesTest(){
-        App classUnderTest = new App();
+        Lab2 classUnderTest = new Lab2();
 
         int[] arr = {1, 2, 3, 1};
         assertEquals(true,classUnderTest.containsDuplicates(arr), "Test failed check your parameters");
@@ -25,7 +26,7 @@ class AppTest {
     }
     @Test
     void temperaturesTest(){
-        App classUnderTest = new App();
+        Lab2 classUnderTest = new Lab2();
         double[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
